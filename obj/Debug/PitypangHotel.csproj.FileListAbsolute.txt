@@ -1,0 +1,11 @@
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\bin\Debug\PitypangHotel.exe.config
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\bin\Debug\PitypangHotel.exe
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\bin\Debug\PitypangHotel.pdb
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.AssemblyReference.cache
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form1.resources
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Properties.Resources.resources
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.GenerateResource.cache
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.CoreCompileInputs.cache
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.exe
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.pdb

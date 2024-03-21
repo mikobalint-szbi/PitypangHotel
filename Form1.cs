@@ -15,6 +15,9 @@ namespace PitypangHotel
         public Form1()
         {
             InitializeComponent();
+
+            tableLayoutPanel2.BackColor = Color.FromArgb(55, 140, 231);
+            tableLayoutPanel1.BackColor = Color.FromArgb(223, 245, 255);
         }
     }
 }
