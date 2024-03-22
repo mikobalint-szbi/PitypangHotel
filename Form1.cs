@@ -68,14 +68,14 @@ namespace PitypangHotel
             Label kisSzoveg = new Label();           
             this.Controls.Add(kisSzoveg);
 
-            kisSzoveg.Top = 550;
+            kisSzoveg.Top = 547;
             kisSzoveg.Left = 10;
             unit = unit + 1;
 
             kisSzoveg.ForeColor = Color.White;
-            kisSzoveg.Size = new Size(1000, 10);
+            kisSzoveg.Size = new Size(1000, 15);
             kisSzoveg.Text = "Készítette: Mikó Bálint, Benyeda Gábor, Vinars Dániel, Szalkai-Szabó Ádám és Horváth Dániel";
-            kisSzoveg.Font = new Font("Microsoft YaHei UI", 6, FontStyle.Regular);
+            kisSzoveg.Font = new Font("Microsoft YaHei UI", 7, FontStyle.Regular);
 
 
 
