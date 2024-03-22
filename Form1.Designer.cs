@@ -195,7 +195,7 @@
             this.label8.Size = new System.Drawing.Size(93, 22);
             this.label8.TabIndex = 5;
             this.label8.Text = "Szoba";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // comboBox2
             // 
