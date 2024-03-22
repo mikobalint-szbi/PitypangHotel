@@ -18,12 +18,12 @@ namespace PitypangHotel
         {
             InitializeComponent();
 
-            tableLayoutPanel2.BackColor = Color.FromArgb(55, 140, 231);
-            tableLayoutPanel1.BackColor = Color.FromArgb(223, 245, 255);
+            tableLayoutPanel2.BackColor = Color.FromArgb(0, 0, 255);
+            tableLayoutPanel1.BackColor = Color.FromArgb(255, 255, 255);
 
-           /* var pfc = new PrivateFontCollection();
-            pfc.AddFontFile("Lexend-VariableFont_wght.ttf");  //Bitmgothic.ttf
-            label1.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);*/
+            var pfc = new PrivateFontCollection();
+            pfc.AddFontFile("Belanosima-Regular.ttf"); 
+            label1.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
 
         }
 
