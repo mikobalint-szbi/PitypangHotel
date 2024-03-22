@@ -22,9 +22,9 @@ namespace PitypangHotel
 
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            tableLayoutPanel2.BackColor = Color.FromArgb(0, 127, 115);
+            tableLayoutPanel2.BackColor = Color.FromArgb(0, 59, 149);
             tableLayoutPanel1.BackColor = Color.FromArgb(255, 255, 255);
-            tableLayoutPanel5.BackColor = Color.FromArgb(0, 127, 115);
+            tableLayoutPanel5.BackColor = Color.FromArgb(0, 59, 149);
 
 
             var betuTipus = new PrivateFontCollection();
@@ -39,7 +39,7 @@ namespace PitypangHotel
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            this.BackColor = Color.FromArgb(0, 127, 115);
+            this.BackColor = Color.FromArgb(0, 59, 149);
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -68,8 +68,8 @@ namespace PitypangHotel
             Button foglalas = new Button();
             foglalas.Height = 50;
             foglalas.Width = 120;
-            //foglalas.BackColor = Color.Red;
-            foglalas.ForeColor = Color.White;
+            foglalas.BackColor = Color.White; 
+            foglalas.ForeColor = Color.FromArgb(0, 59, 149);
             foglalas.Location = new Point(370, 300);
             foglalas.Text = "Foglalás";
             foglalas.Name = "foglalasButton";
@@ -80,8 +80,8 @@ namespace PitypangHotel
             Button stat = new Button();
             stat.Height = 50;
             stat.Width = 120;
-            //stat.BackColor = Color.White;
-            stat.ForeColor = Color.White;
+            stat.BackColor = Color.White;
+            stat.ForeColor = Color.FromArgb(0, 59, 149);
             stat.Location = new Point(520, 300);
             stat.Text = "Statisztika";
             stat.Name = "statButton";
