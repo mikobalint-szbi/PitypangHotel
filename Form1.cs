@@ -70,7 +70,7 @@ namespace PitypangHotel
             foglalas.Width = 120;
             //foglalas.BackColor = Color.Red;
             foglalas.ForeColor = Color.White;
-            foglalas.Location = new Point(360, 300);
+            foglalas.Location = new Point(370, 300);
             foglalas.Text = "Foglalás";
             foglalas.Name = "foglalasButton";
             foglalas.Font = new Font(betuTipus.Families[0], 14, FontStyle.Regular);
@@ -80,9 +80,9 @@ namespace PitypangHotel
             Button stat = new Button();
             stat.Height = 50;
             stat.Width = 120;
-            //stat.BackColor = Color.Red;
+            //stat.BackColor = Color.White;
             stat.ForeColor = Color.White;
-            stat.Location = new Point(550, 300);
+            stat.Location = new Point(520, 300);
             stat.Text = "Statisztika";
             stat.Name = "statButton";
             stat.Font = new Font(betuTipus.Families[0], 14, FontStyle.Regular);
@@ -93,6 +93,12 @@ namespace PitypangHotel
 
         private void foglalasButton_Click(object sender, EventArgs e)
         {
+
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.MinimumSize = new System.Drawing.Size(600, 600);
+
             tableLayoutPanel1.Visible = true;
 
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
@@ -102,6 +108,13 @@ namespace PitypangHotel
 
         private void statButton_Click(object sender, EventArgs e)
         {
+
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.MinimumSize = new System.Drawing.Size(600, 600);
+
+
             tableLayoutPanel1.Visible = true;
             tableLayoutPanel4.Visible = false;
 
@@ -112,12 +125,20 @@ namespace PitypangHotel
 
         private void label2_Click(object sender, EventArgs e)
         {
-           // tableLayoutPanel4.Visible = true;
+            tableLayoutPanel1.Visible = true;
+            tableLayoutPanel4.Visible = true;
+
+            label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
+            label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            
+            tableLayoutPanel1.Visible = true;
+            tableLayoutPanel4.Visible = false;
+
+            label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
+            label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
         }
     }
 }
