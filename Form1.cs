@@ -27,7 +27,9 @@ namespace PitypangHotel
             pfc.AddFontFile("Belanosima-Regular.ttf"); 
             label1.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
 
-          
+            label6.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+
+
 
         }
 
