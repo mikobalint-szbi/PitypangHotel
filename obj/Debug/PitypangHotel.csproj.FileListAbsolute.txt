@@ -9,3 +9,4 @@ C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHote
 C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.CoreCompileInputs.cache
 C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.exe
 C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.pdb
+C:\Users\Szalkai-SzaboAdam\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.UserControl1.resources

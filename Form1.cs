@@ -14,6 +14,7 @@ namespace PitypangHotel
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace PitypangHotel
             pfc.AddFontFile("Belanosima-Regular.ttf"); 
             label1.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
 
-            label6.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
+            //label6.Font = new Font(pfc.Families[0], 13, FontStyle.Regular);
 
 
 
@@ -41,6 +42,11 @@ namespace PitypangHotel
         private void label2_Click(object sender, EventArgs e)
         {
             tableLayoutPanel4.Visible = true;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
