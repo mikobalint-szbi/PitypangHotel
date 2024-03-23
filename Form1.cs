@@ -39,39 +39,32 @@ namespace PitypangHotel
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            var betuTipus = new PrivateFontCollection();
+            betuTipus.AddFontFile("Belanosima-Regular.ttf");
+
             this.BackColor = Color.FromArgb(0, 59, 149);
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
 
+
             Label nagySzoveg = new Label()
 ;           this.Controls.Add(nagySzoveg);
-
             nagySzoveg.Top = 120;
             nagySzoveg.Left = 120;
             unit = unit + 1;
-
             nagySzoveg.ForeColor = Color.White;
-
-            var betuTipus = new PrivateFontCollection();
-            betuTipus.AddFontFile("Belanosima-Regular.ttf");
             nagySzoveg.Font = new Font(betuTipus.Families[0], 46, FontStyle.Regular);
-
-
             nagySzoveg.Size = new Size(800, 180);
             nagySzoveg.TextAlign = ContentAlignment.MiddleCenter;
             nagySzoveg.Text = "Üdvözlünk a Pitypang Hotel asztali alkalmazásában";
 
-
-
             Label kisSzoveg = new Label();           
             this.Controls.Add(kisSzoveg);
-
             kisSzoveg.Top = 547;
             kisSzoveg.Left = 10;
             unit = unit + 1;
-
             kisSzoveg.ForeColor = Color.White;
             kisSzoveg.Size = new Size(1000, 15);
             kisSzoveg.Text = "Készítette: Mikó Bálint, Benyeda Gábor, Vinars Dániel, Szalkai-Szabó Ádám és Horváth Dániel";
@@ -118,6 +111,10 @@ namespace PitypangHotel
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
 
+            /* Foglalás kódja ide */
+
+
+
         }
 
         private void statButton_Click(object sender, EventArgs e)
@@ -135,6 +132,10 @@ namespace PitypangHotel
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
 
+
+            /* Statisztika kódja ide */
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -144,6 +145,11 @@ namespace PitypangHotel
 
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
+
+            /* Foglalás kódja ide */
+
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -153,6 +159,11 @@ namespace PitypangHotel
 
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
+
+            /* Statisztika kódja ide */
+
+
+
         }
     }
 }
