@@ -132,7 +132,7 @@ namespace PitypangHotel
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
 
-
+     
             /* Statisztika kódja ide */
 
 

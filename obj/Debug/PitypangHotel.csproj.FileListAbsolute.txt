@@ -17,7 +17,6 @@ C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\Pitypang
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.SuggestedBindingRedirects.cache
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form1.resources
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Properties.Resources.resources
-C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.UserControl1.resources
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.GenerateResource.cache
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.CoreCompileInputs.cache
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.exe
