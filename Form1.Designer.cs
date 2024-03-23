@@ -135,10 +135,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(49, 138);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(50, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 38);
+            this.label4.Size = new System.Drawing.Size(72, 40);
             this.label4.TabIndex = 0;
             this.label4.Text = "Foglalás részletei";
             // 
