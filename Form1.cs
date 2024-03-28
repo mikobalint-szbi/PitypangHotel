@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.IO;
 
 namespace PitypangHotel
 {
@@ -31,13 +32,96 @@ namespace PitypangHotel
             betuTipus.AddFontFile("Belanosima-Regular.ttf"); 
             label1.Font = new Font(betuTipus.Families[0], 14, FontStyle.Regular);
 
-
         }
 
         int unit = 1;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            // string[] honapok = { "JAN", "FEB", "MÁRC", "ÁPR", "MÁJ", "JÚN", "JÚL", "AUG", "SZEPT", "OKT", "NOV", "DEC" };
+
+            StreamReader honapokFile = new StreamReader("honapok.txt");
+            Honap[] honapok = new Honap[12];
+
+            for (int i = 0; i < 12; i++)
+            {
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[i].HeaderCell.Value = (i+1).ToString("D2");
+
+                honapok[i] = new Honap(honapokFile.ReadLine(), honapokFile.ReadLine(), honapokFile.ReadLine());
+            }
+
+
+            honapokFile.Close();
+
+
+
+            StreamReader pitypang = new StreamReader("pitypang.txt");
+            StreamWriter bevetel = new StreamWriter("bevetel.txt");
+
+            int foglalasokSzama = int.Parse(pitypang.ReadLine());
+            Foglalas[] foglalasok = new Foglalas[foglalasokSzama];
+            string output = "";
+
+            int maxI = 0;
+            int maxV = 0;
+
+            int[] vendegejStatisztika = new int[12];
+
+
+            for (int i = 0; i < foglalasokSzama; i++)
+            {
+                foglalasok[i] = new Foglalas(pitypang.ReadLine());
+
+                if (foglalasok[i].ejszakakSzama() > maxV) // 2. feladat
+                {
+                    maxI = i;
+                    maxV = foglalasok[i].ejszakakSzama();
+                }
+
+                if (foglalasok[i].ejszakakSzama() == 1) // 4. feladat
+                {
+                    for (int j = 11; j >= 0; j--)
+                    {
+                        if (foglalasok[i].erkezes > honapok[j].elsoNap)
+                        {
+                            vendegejStatisztika[j]++;
+                            break;
+                        }
+
+                    }
+
+                }
+
+
+
+                bevetel.WriteLine($"{foglalasok[i].sorszam}:{foglalasok[i].arSzamolas()}"); // 3. feladat
+            }
+
+            output += $"2. feladat:\n{foglalasok[maxI].vendegID} ({foglalasok[maxI].erkezes}) – {maxV}\n\n";
+
+            output += "3. feladat:\n";
+            for (int i = 0; i < 12; i++)
+            {
+                output += $"{i+1}: {vendegejStatisztika[i]} vendégéj\n";
+            }
+
+
+            pitypang.Close();
+            bevetel.Close();
+
+            TableLayoutPanel tableLayoutPanel6 = new TableLayoutPanel();
+            tableLayoutPanel6.Visible = false;
+            tableLayoutPanel6.ColumnCount = 3;
+            tableLayoutPanel6.RowCount = 3;
+            tableLayoutPanel6.Dock = DockStyle.Fill;
+
+            Controls.Add(tableLayoutPanel6);
+
+            TextBox textBox = new TextBox();
+            tableLayoutPanel6.Controls.Add(textBox, 1, 1);
+
 
             var betuTipus = new PrivateFontCollection();
             betuTipus.AddFontFile("Belanosima-Regular.ttf");
@@ -128,6 +212,7 @@ namespace PitypangHotel
 
             tableLayoutPanel1.Visible = true;
             tableLayoutPanel4.Visible = false;
+            this.tableLayoutPanel6.Visible = true;
 
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
@@ -163,6 +248,80 @@ namespace PitypangHotel
             /* Statisztika kódja ide */
 
 
+
+        }
+    }
+
+    class Honap
+    {
+        public string nev;
+        public int hossz;
+        public int elsoNap;
+
+        public Honap(string nev, string hossz, string elsoNap)
+        {
+            this.nev = nev;
+            this.hossz = int.Parse(hossz);
+            this.elsoNap = int.Parse(elsoNap);
+        }
+    }
+
+    class Foglalas
+    {
+        public int sorszam;
+        public int szobaszam;
+        public int erkezes;
+        public int tavozas;
+        public int vendegSzam;
+        public bool reggeli;
+        public string vendegID;
+
+        public Foglalas(string sor)
+        {
+            string[] szet = sor.Split(' ');
+
+            sorszam = int.Parse(szet[0]);
+            szobaszam = int.Parse(szet[1]);
+            erkezes = int.Parse(szet[2]);
+            tavozas = int.Parse(szet[3]);
+            vendegSzam = int.Parse(szet[4]);
+            reggeli = szet[5] == "1";
+            vendegID = szet[6];
+        }
+
+        public int ejszakakSzama()
+        {
+            return this.tavozas - this.erkezes;
+        }
+
+        public int arSzamolas()
+        {
+            int osszeg = 0;
+
+            if (this.erkezes < 121) // Tavasz
+            {
+                osszeg += 9000;
+            }
+            else if (this.erkezes < 244) // Nyár
+            {
+                osszeg += 10000;
+            }
+            else // Ősz
+            {
+                osszeg += 8000;
+            }
+
+            if (this.vendegSzam > 2)
+            {
+                osszeg += 2000;
+            }
+
+            if (this.reggeli)
+            {
+                osszeg += this.vendegSzam * 1100;
+            }
+
+            return osszeg * this.ejszakakSzama();
 
         }
     }
