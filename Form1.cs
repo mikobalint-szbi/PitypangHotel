@@ -211,7 +211,6 @@ namespace PitypangHotel
 
             tableLayoutPanel1.Visible = true;
             tableLayoutPanel4.Visible = false;
-            this.tableLayoutPanel6.Visible = true;
 
             label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
             label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
