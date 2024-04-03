@@ -32,3 +32,15 @@ H:\O\Local\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.GenerateResource.
 H:\O\Local\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.CoreCompileInputs.cache
 H:\O\Local\GitHub\PitypangHotel\obj\Debug\PitypangHotel.exe
 H:\O\Local\GitHub\PitypangHotel\obj\Debug\PitypangHotel.pdb
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\bin\Debug\PitypangHotel.exe.config
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\bin\Debug\PitypangHotel.exe
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\bin\Debug\PitypangHotel.pdb
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.AssemblyReference.cache
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.SuggestedBindingRedirects.cache
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form1.resources
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Properties.Resources.resources
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.GenerateResource.cache
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.csproj.CoreCompileInputs.cache
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.exe
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.pdb
+F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form2.resources
