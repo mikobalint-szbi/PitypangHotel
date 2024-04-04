@@ -38,7 +38,7 @@ namespace PitypangHotel
         int unit = 1;
         TableLayoutPanel tableLayoutPanel6 = new TableLayoutPanel();
 
-        Foglalas[] foglalasok;
+        public Foglalas[] foglalasok;
         int foglalasokSzama;
         Honap[] honapok;
         string valasztottEv;
@@ -402,8 +402,17 @@ namespace PitypangHotel
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form2 dialog = new Form2(honapok[e.RowIndex].elsoNap + e.ColumnIndex + 1,foglalasokSzama+1);
+   
+
+            Form2 dialog = new Form2(honapok[e.RowIndex].elsoNap + e.ColumnIndex,foglalasokSzama+1, comboBox1.SelectedItem.ToString());
+            dialog.mehet = false;
+            
             dialog.ShowDialog();
+            while (!dialog.mehet)
+            {
+                System.Threading.Thread.Sleep(100);
+            }
+            textBox.Text = evFeldolgozas(comboBox1.SelectedItem.ToString()).Replace("\n", Environment.NewLine);
 
 
         }
