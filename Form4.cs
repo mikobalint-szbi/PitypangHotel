@@ -27,6 +27,8 @@ namespace PitypangHotel
             label1.Font = new Font(betuTipus.Families[0], 12, FontStyle.Regular);
         }
 
+
+
         private void Form4_Load(object sender, EventArgs e)
         {
         
