@@ -10,6 +10,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PitypangHotel
 {
@@ -32,15 +33,34 @@ namespace PitypangHotel
             label1.Font = new Font(betuTipus.Families[0], 12, FontStyle.Regular);
         }
 
+        int unit = 1;
+        TableLayoutPanel tableLayoutPanel6 = new TableLayoutPanel();
 
+        public Foglalas[] foglalasok2;
+        int foglalasokSzama;
+        Honap[] honapok;
+        string valasztottEv;
+        string[] osszesEv;
+        //TextBox textBox;
 
         private void Form4_Load(object sender, EventArgs e)
         {
             //File.Delete("bevetel_teszt.txt");
 
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+
+
+
+            // string[] honapok = { "JAN", "FEB", "MÁRC", "ÁPR", "MÁJ", "JÚN", "JÚL", "AUG", "SZEPT", "OKT", "NOV", "DEC" };
+
+
+
+
+
+
+
+
+
+
 
             StreamReader sr = new StreamReader("pitypang_teszt.txt", Encoding.UTF8);
             //sr.ReadLine(); //984
@@ -119,8 +139,147 @@ namespace PitypangHotel
             //sw.Close();
             //label1.Text = "A fájlba írás sikeres volt";
 
+
+
+
+
+
+
+
+
+
+
+
+            //StreamReader pitypang = new StreamReader("Database\\" + ev + ".txt");
+            StreamWriter bevetel = new StreamWriter("bevetel.txt");
+
+           // foglalasokSzama = int.Parse(pitypang.ReadLine());
+            foglalasok2 = new Foglalas[foglalasokSzama];
+            string output = "";
+
+            int maxI = 0;
+            int maxV = 0;
+
+            int[] vendegejStatisztika = new int[12];
+
+
+            for (int i = 0; i < foglalasokSzama; i++)
+            {
+    
+
+                if (foglalasok2[i].ejszakakSzama() == 1) // 4. feladat
+                {
+                    for (int j = 11; j >= 0; j--)
+                    {
+
+                        if (foglalasok2[i].erkezes > honapok[j].elsoNap)
+                        {
+                            vendegejStatisztika[j]++;
+                            break;
+                        }
+
+                    }
+
+                }
+
+
+            }
+
+
+
+
+
+
+            List<string> kii = new List<string>();
+
+
+            for (int i = 0; i < 12; i++)
+            {
+                kii.Add($"{i + 1}: {vendegejStatisztika[i]} vendégéj\n");
+            }
+
+            textBox3.Text = String.Join(Environment.NewLine, kii);
+
         }
 
-   
+
+
+
+
+
+        class Honap
+        {
+            public string nev;
+            public int hossz;
+            public int elsoNap;
+
+            public Honap(string nev, string hossz, string elsoNap)
+            {
+                this.nev = nev;
+                this.hossz = int.Parse(hossz);
+                this.elsoNap = int.Parse(elsoNap);
+            }
+        }
+
+
+        public class Foglalas
+        {
+            public int sorszam;
+            public int szobaszam;
+            public int erkezes;
+            public int tavozas;
+            public int vendegSzam;
+            public bool reggeli;
+            public string vendegID;
+
+            public Foglalas(string sor)
+            {
+                string[] szet = sor.Split(' ');
+
+                sorszam = int.Parse(szet[0]);
+                szobaszam = int.Parse(szet[1]);
+                erkezes = int.Parse(szet[2]);
+                tavozas = int.Parse(szet[3]);
+                vendegSzam = int.Parse(szet[4]);
+                reggeli = szet[5] == "1";
+                vendegID = szet[6];
+            }
+
+            public int ejszakakSzama()
+            {
+                return this.tavozas - this.erkezes;
+            }
+
+            public int arSzamolas()
+            {
+                int osszeg = 0;
+
+                if (this.erkezes < 121) // Tavasz
+                {
+                    osszeg += 9000;
+                }
+                else if (this.erkezes < 244) // Nyár
+                {
+                    osszeg += 10000;
+                }
+                else // Ősz
+                {
+                    osszeg += 8000;
+                }
+
+                if (this.vendegSzam > 2)
+                {
+                    osszeg += 2000;
+                }
+
+                if (this.reggeli)
+                {
+                    osszeg += this.vendegSzam * 1100;
+                }
+
+                return osszeg * this.ejszakakSzama();
+
+            }
+        }
     }
 }
