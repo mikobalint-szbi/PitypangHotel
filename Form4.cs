@@ -36,7 +36,7 @@ namespace PitypangHotel
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            File.Delete("bevetel_teszt.txt");
+            //File.Delete("bevetel_teszt.txt");
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -73,9 +73,9 @@ namespace PitypangHotel
             textBox1.Text = maxNev + " (" + maxErkezes + ") - " + maxEltoltott;
 
 
+            List<string> temp = new List<string>();
 
-
-            StreamWriter sw = new StreamWriter("bevetel.txt", true, Encoding.ASCII);
+            //StreamWriter sw = new StreamWriter("bevetel.txt", true, Encoding.ASCII);
 
             for (int i = 0; i < foglalasok.Count; i++)
             {
@@ -109,11 +109,14 @@ namespace PitypangHotel
                 int tempSorszam = foglalasok[i].Sorszam;
 
                 string sorocska = tempSorszam + ";" + tempOsszeg + "\n";
-                sw.Write(sorocska);
+                //textBox2.Text = Environment.NewLine + sorocska;
+                temp.Add(sorocska);
+                //sw.Write(sorocska);
 
             }
 
-            sw.Close();
+            textBox2.Text = String.Join(Environment.NewLine, temp);
+            //sw.Close();
             //label1.Text = "A fájlba írás sikeres volt";
 
         }
