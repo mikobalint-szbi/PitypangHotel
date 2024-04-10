@@ -27,7 +27,8 @@ namespace PitypangHotel
             this.erkezes = erkezes;
             this.sorszam = sorszam;
             this.valasztottEv = valasztottEv;
-
+            this.BackColor = Color.FromArgb(0, 59, 149);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,9 +48,6 @@ namespace PitypangHotel
             mehet = true;
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

@@ -45,3 +45,5 @@ F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel
 F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.pdb
 F:\Users\felhasználó\Dokumentumok\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form2.resources
 C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form2.resources
+C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form3.resources
+C:\Users\Szalkai-Szabó Ádám\Documents\GitHub\PitypangHotel\obj\Debug\PitypangHotel.Form4.resources

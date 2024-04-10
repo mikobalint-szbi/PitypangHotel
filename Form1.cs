@@ -31,7 +31,7 @@ namespace PitypangHotel
 
             var betuTipus = new PrivateFontCollection();
             betuTipus.AddFontFile("Belanosima-Regular.ttf"); 
-            label1.Font = new Font(betuTipus.Families[0], 14, FontStyle.Regular);
+            label1.Font = new Font(betuTipus.Families[0], 12, FontStyle.Regular);
 
         }
 
@@ -83,8 +83,6 @@ namespace PitypangHotel
 
 
 
-
-
             tableLayoutPanel6.Visible = false;
             tableLayoutPanel6.ColumnCount = 3;
             tableLayoutPanel6.RowCount = 3;
@@ -107,8 +105,10 @@ namespace PitypangHotel
             textBox.Enabled = false;
             textBox.ForeColor = Color.Black;
             textBox.Dock = DockStyle.Fill;
-            textBox.Text = output.Replace("\n",Environment.NewLine);
-            textBox.Font = new Font("Consolas", 14);
+            textBox.Text = output.Replace("\n", Environment.NewLine);
+            //textBox.Font = new Font("Consolas", 14);
+
+
 
             var betuTipus = new PrivateFontCollection();
             betuTipus.AddFontFile("Belanosima-Regular.ttf");
@@ -263,7 +263,7 @@ namespace PitypangHotel
                 for (int col = 0; col < 31; col++)
                 {
                     if (col < honapok[row].hossz)
-                        dataGridView1.Rows[row].Cells[col].Style.BackColor = Color.FromArgb(0, 59, 149);
+                        dataGridView1.Rows[row].Cells[col].Style.BackColor = Color.Green;//Color.FromArgb(0, 59, 149);
                     else
                         dataGridView1.Rows[row].Cells[col].Style.BackColor = Color.Gray;
                 }
