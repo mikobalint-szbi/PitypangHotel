@@ -113,14 +113,14 @@ namespace PitypangHotel
             var betuTipus = new PrivateFontCollection();
             betuTipus.AddFontFile("Belanosima-Regular.ttf");
 
-            this.BackColor = Color.FromArgb(0, 59, 149);
+            //this.BackColor = Color.FromArgb(0, 59, 149);
 
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            /*this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MinimizeBox = false;*/
 
 
-            Label nagySzoveg = new Label()
+            /*Label nagySzoveg = new Label()
 ;           this.Controls.Add(nagySzoveg);
             nagySzoveg.Top = 120;
             nagySzoveg.Left = 120;
@@ -139,11 +139,11 @@ namespace PitypangHotel
             kisSzoveg.ForeColor = Color.White;
             kisSzoveg.Size = new Size(1000, 15);
             kisSzoveg.Text = "Készítette: Mikó Bálint, Benyeda Gábor, Vinars Dániel, Szalkai-Szabó Ádám és Horváth Dániel";
-            kisSzoveg.Font = new Font("Microsoft YaHei UI", 7, FontStyle.Regular);
+            kisSzoveg.Font = new Font("Microsoft YaHei UI", 7, FontStyle.Regular);*/
 
 
 
-            Button foglalas = new Button();
+           /* Button foglalas = new Button();
             foglalas.Height = 50;
             foglalas.Width = 120;
             foglalas.BackColor = Color.White; 
@@ -152,7 +152,7 @@ namespace PitypangHotel
             foglalas.Text = "Foglalás";
             foglalas.Name = "foglalasButton";
             foglalas.Font = new Font(betuTipus.Families[0], 14, FontStyle.Regular);
-            foglalas.Click += new EventHandler(foglalasButton_Click);
+            //foglalas.Click += new EventHandler(foglalasButton_Click);
             Controls.Add(foglalas);
 
             Button stat = new Button();
@@ -164,8 +164,8 @@ namespace PitypangHotel
             stat.Text = "Statisztika";
             stat.Name = "statButton";
             stat.Font = new Font(betuTipus.Families[0], 14, FontStyle.Regular);
-            stat.Click += new EventHandler(statButton_Click);
-            Controls.Add(stat);
+            //stat.Click += new EventHandler(statButton_Click);
+            Controls.Add(stat);*/
 
         }
 
@@ -313,76 +313,6 @@ namespace PitypangHotel
 
 
             }
-        }
-
-        private void foglalasButton_Click(object sender, EventArgs e)
-        {
-
-            this.FormBorderStyle = FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
-            this.MinimizeBox = true;
-            this.MinimumSize = new System.Drawing.Size(600, 600);
-
-            tableLayoutPanel1.Visible = true;
-
-            label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
-            label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
-
-            /* Foglalás kódja ide */
-
-
-
-        }
-
-        private void statButton_Click(object sender, EventArgs e)
-        {
-
-            this.FormBorderStyle = FormBorderStyle.Sizable;
-            this.MaximizeBox = true;
-            this.MinimizeBox = true;
-            this.MinimumSize = new System.Drawing.Size(600, 600);
-
-            tableLayoutPanel1.Visible = true;
-            tableLayoutPanel4.Visible = false;
-            tableLayoutPanel6.Visible = true;
-
-            label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
-            label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
-
-
-            /* Statisztika kódja ide */
-
-            
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            tableLayoutPanel1.Visible = true;
-            tableLayoutPanel4.Visible = true;
-
-            label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
-            label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
-
-            /* Foglalás kódja ide */
-
-
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            tableLayoutPanel1.Visible = true;
-            tableLayoutPanel4.Visible = false;
-            tableLayoutPanel6.Visible = true;
-
-            label2.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Regular);
-            label3.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
-
-            /* Statisztika kódja ide */
-
-
-
         }
 
         private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
